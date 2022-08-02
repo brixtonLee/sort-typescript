@@ -1,31 +1,18 @@
-class Sorter {
-    // Data that we want to sort
-    // collection: number[];
+import { Sorter } from "./Sorter";
+import { NumbersCollection } from "./NumbersCollection";
+import { CharactersCollection } from "./CharactersCollection";
+import { LinkedList } from "./LinkedLists";
+const sorter = new NumbersCollection([1,2,5,3,9,2]);
+// const sorter = new CharactersCollection('ascgdfgvacd');
 
-    // constructor(collection: number[]){
-    //     this.collection = collection;
-    // }
+// const linkedList = new LinkedList();
+// linkedList.add(500);
+// linkedList.add(300);
+// linkedList.add(800);
+// linkedList.add(-10);
+// linkedList.add(5);
+// linkedList.sort();
+// linkedList.print();
 
-    // More clearer code
-    constructor(public collection: number[]){};
-
-    // Function
-    sort(): void {
-        const { length } = this.collection;
-
-        for(let i = 0; i < length; i++) {
-            // - length is to prevent from looping over the whole aray
-            for(let j = 0; j < length - i - 1; j++) {
-                // Compare left with right element
-                if(this.collection[j] > this.collection[j + 1]) {
-                    const leftHand = this.collection[j];
-                    this.collection[j] = this.collection[j + 1];
-                    this.collection[j + 1] = leftHand;
-                }
-            }
-        }
-    }
-}
-
-
-
+sorter.try();
+// console.log(sorter.data);
